@@ -19,6 +19,10 @@ https.get(API, function(res) {
 
     res.on('end', function() {
         bmw = JSON.parse(bmw);
-        console.log(bmw);
+
+        bmw.modelos.forEach(function(b) {
+            console.log(b.nome);
+        });
+
     });
 });
